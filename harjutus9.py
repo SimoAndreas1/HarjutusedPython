@@ -1,0 +1,19 @@
+#Simo Andreas Novikov
+#14.03.2022
+#Harjutus 09
+
+#tänane kuupäev
+import datetime
+from datetime import date
+kuupaev = date.today()
+today = kuupaev.strftime("%d %B %Y")
+print(today)
+
+#isikukood
+isikukood = "50411125216"
+aasta = int("20" + isikukood[1] + isikukood[2])
+kuu = int(isikukood[3] + isikukood[4])
+paev = int(isikukood[5] + isikukood[6])
+vanus = date.today() - datetime.date(aasta, kuu, paev)
+avanus = str(vanus).split(" ")
+print(int(int(avanus[0])/(365)))
